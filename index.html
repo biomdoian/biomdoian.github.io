@@ -1,329 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biomdo Ian | Full-Stack Developer Portfolio</title>
-    <meta name="description" content="Biomdo Ian's professional portfolio showcasing full-stack web development projects, including Python, Flask, React, and more.">
-    <meta name="keywords" content="Biomdo Ian, Full-Stack Developer, Python, Flask, React, JavaScript, HTML, CSS, Portfolio, Web Development, Backend, Frontend">
-    <meta name="author" content="Biomdo Ian">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-color: #0d0f14;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
 
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    .contact-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    .contact-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
+    form input,
+    form textarea {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 300px;
+      box-sizing: border-box;
+      background-color: #2a2a2a; /* Darker input background */
+      color: white;
+    }
+
+    form textarea {
+      width: 100%;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #00e6e6; /* Cyan button */
+      color: #0d0f14;
+      padding: 0.75rem 1.25rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00aacc; /* Darker cyan on hover */
+    }
+
+    .contact-details-group {
+      margin-top: 2rem;
+      display: flex; /* Make this a flex container */
+      flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+      justify-content: center; /* Center items horizontally */
+      gap: 1.5rem; /* Space between contact items */
+      margin-bottom: 2rem;
+    }
+
+    .contact-details-item {
+      display: flex;
+      align-items: center;
+      color: #ccc;
+    }
+
+    .contact-details-item i {
+      margin-right: 0.5rem;
+      color: #00e6e6; /* Cyan color for icons */
+      font-size: 1.2rem;
+    }
+
+    .contact-details-item a {
+      color: #00e6e6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-details-item a:hover {
+      color: #00aacc;
+    }
+
+    /* REMOVED: .socials fixed positioning */
+    .socials {
+      display: flex;
+      flex-wrap: wrap; /* Allow icons to wrap if space is limited */
+      justify-content: center; /* Center icons horizontally */
+      gap: 1rem; /* Space between icons */
+      margin-top: 2rem; /* Add some space above social icons */
+    }
+
+    .socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #00e6e6;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.2rem; /* Adjust icon size */
+    }
+
+    .socials a:hover {
+      background-color: #00e6e6;
+      color: #0d0f14;
+      transform: scale(1.1); /* Slight enlarge on hover */
+    }
+
+    @media (max-width: 768px) {
+      form input,
+      form textarea {
+        width: 100%;
+      }
+      .contact-details-group {
+        flex-direction: column; /* Stack contact details vertically on small screens */
+        align-items: center;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 to-indigo-950 text-white font-poppins antialiased">
+<body>
 
-    <header class="fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300" id="navbar">
-        <nav class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#home" class="text-3xl font-bold font-montserrat text-cyan-400 hover:text-cyan-300 transition-colors duration-300">BI</a>
-            <div class="lg:hidden">
-                <button id="nav-toggle" class="text-white focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-            <ul class="hidden lg:flex space-x-8 text-lg">
-                <li><a href="#home" class="hover:text-cyan-400 transition-colors duration-300">Home</a></li>
-                <li><a href="#about" class="hover:text-cyan-400 transition-colors duration-300">About</a></li>
-                <li><a href="#skills" class="hover:text-cyan-400 transition-colors duration-300">Skills</a></li>
-                <li><a href="#portfolio" class="hover:text-cyan-400 transition-colors duration-300">Portfolio</a></li>
-                <li><a href="#contact" class="hover:text-cyan-400 transition-colors duration-300">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu" class="hidden lg:hidden bg-opacity-90 absolute w-full py-4 text-center">
-            <ul class="flex flex-col space-y-4 text-lg">
-                <li><a href="#home" class="block py-2 hover:bg-gray-700 transition-colors duration-300">Home</a></li>
-                <li><a href="#about" class="block py-2 hover:bg-gray-700 transition-colors duration-300">About</a></li>
-                <li><a href="#skills" class="block py-2 hover:bg-gray-700 transition-colors duration-300">Skills</a></li>
-                <li><a href="#portfolio" class="block py-2 hover:bg-gray-700 transition-colors duration-300">Portfolio</a></li>
-                <li><a href="#contact" class="block py-2 hover:bg-gray-700 transition-colors duration-300">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+  <div class="contact-section">
+    <h2>Send Me a Message</h2>
 
-    <main>
-        <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
-            <div class="absolute inset-0 bg-cover bg-center animate-fade-in-bg" style="background-image: url('images/img.jpg');"></div>
-            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-            <div class="relative z-10 p-6 max-w-4xl mx-auto opacity-0 transform translate-y-10 animate-fade-in-up">
-                <h1 class="text-5xl md:text-7xl font-bold font-montserrat leading-tight mb-4 drop-shadow-lg">CRAFTING ROBUST WEB SOLUTIONS</h1>
-                <p class="text-2xl md:text-3xl font-light text-cyan-400 mb-8 drop-shadow-md">Aspiring Full-Stack Developer</p>
-                <a href="#portfolio" class="btn-primary transform hover:scale-105 transition-transform duration-300">Explore Projects <i class="fas fa-arrow-right ml-2"></i></a>
-            </div>
-        </section>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="subject" placeholder="Subject" />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">
+        Send Message <i class="fas fa-paper-plane"></i> </button>
+    </form>
 
-        <section id="about" class="py-20 bg-gray-900 overflow-hidden">
-            <div class="container mx-auto px-6 lg:flex items-center gap-12">
-                <div class="lg:w-1/3 mb-10 lg:mb-0 transform opacity-0 translate-y-10 reveal-on-scroll">
-                    <img src="images/biomdo-ian-avatar.png" alt="Biomdo Ian Avatar" class="rounded-full w-64 h-64 object-cover mx-auto lg:mx-0 shadow-lg border-4 border-cyan-400 animate-pulse-border">
-                </div>
-                <div class="lg:w-2/3 transform opacity-0 translate-y-10 reveal-on-scroll delay-200">
-                    <h2 class="text-4xl font-bold font-montserrat mb-6 text-center lg:text-left">About Me</h2>
-                    <p class="text-lg leading-relaxed text-gray-300 mb-8">
-                        I am an enthusiastic and dedicated aspiring Full-Stack Developer, set to graduate in November this year. My passion lies in crafting robust and scalable web applications from conception to deployment. I possess a strong foundation in backend development using Python and Flask, coupled with expertise in PostgreSQL for efficient data management and JWT authentication for secure API access. On the frontend, I am proficient in building dynamic and responsive user interfaces with React, JavaScript, HTML, and CSS (including Tailwind CSS). I am eager to apply my problem-solving skills and comprehensive understanding of modern web technologies to contribute to innovative projects and grow within a collaborative development environment.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <hr style="border: 0.5px solid #444; margin: 2rem auto; width: 80%;" />
 
-        <section id="skills" class="py-20 bg-gray-950 overflow-hidden">
-            <div class="container mx-auto px-6 transform opacity-0 translate-y-10 reveal-on-scroll">
-                <h2 class="text-4xl font-bold font-montserrat mb-6 text-center text-white">Skills & Technologies</h2>
-                <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">SQLAlchemy</span>
-                    <span class="skill-tag">Flask-RESTful</span>
-                    <span class="skill-tag">Flask-JWT-Extended</span>
-                    <span class="skill-tag">Flask-Bcrypt</span>
-                    <span class="skill-tag">Tailwind CSS</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">RESTful APIs</span>
-                    <span class="tech-tag">JWT Authentication</span>
-                    <span class="tech-tag">Database Migrations</span>
-                    <span class="tech-tag">ORM</span>
-                    <span class="tech-tag">Environment Variables</span>
-                    <span class="tech-tag">Postman</span>
-                </div>
-            </div>
-        </section>
+    <h3>You can also find me here:</h3>
 
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/yournumber" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://medium.com/@yourprofile" target="_blank"><i class="fab fa-medium"></i></a>
+    </div>
 
-        <section id="portfolio" class="py-20 bg-gray-900 overflow-hidden">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold font-montserrat mb-12 text-center text-white transform opacity-0 translate-y-10 reveal-on-scroll">My Projects</h2>
+    <div class="contact-details-group">
+      <div class="contact-details-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:biomdoian20@gmail.com">biomdoian20@gmail.com</a>
+      </div>
+      <div class="contact-details-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+254743870689">0743870689</a>
+      </div>
+      <div class="contact-details-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Kenya, Nairobi</span>
+      </div>
+    </div>
 
-                <div class="flex flex-wrap justify-center gap-4 mb-12 transform opacity-0 translate-y-10 reveal-on-scroll delay-100">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
-                    <button class="filter-btn" data-filter="backend">Backend</button>
-                    <button class="filter-btn" data-filter="frontend">Frontend</button>
-                    <button class="filter-btn" data-filter="python-app">Python Apps</button>
-                </div>
+    <p style="margin-top: 1rem;"><a href="vcard/biomdo-ian.vcf" download style="color: #00e6e6; text-decoration: underline;">Download vCard <i class="fas fa-id-card"></i></a></p>
+  </div>
 
-                <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll project-card fullstack">
-                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                            <img src="images/drivefix.jpg" alt="DriveFix Project" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">DriveFix: Vehicle Service Platform</h3>
-                                <p class="text-gray-300 text-sm mb-4">A full-stack web application connecting vehicle owners with qualified mechanics for repair and maintenance services. It will feature role-based user authentication, service listings, and a booking system.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">Tailwind CSS</span>
-                                </div>
-                                <a href="https://github.com/biomdoian/DriveFix-repo-link" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
-                                <p class="text-xs text-gray-400 mt-2">Live Demo Coming Soon</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll delay-100 project-card backend python-app">
-                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                            <img src="images/late-show-api.jpg" alt="Late Show API Project" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">Late Show API</h3>
-                                <p class="text-gray-300 text-sm mb-4">A robust backend REST API built with Flask, managing guests, episodes, and their appearances for a late-night show. Features include JWT authentication for protected routes, PostgreSQL database integration, and comprehensive CRUD operations.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">JWT</span>
-                                </div>
-                                <a href="https://github.com/biomdoian/late-show-api-challenge" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
-                                <p class="text-xs text-gray-400 mt-2">Backend Only - See GitHub for details</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll delay-200 project-card backend python-app">
-                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                            <img src="images/pizza-api.jpg" alt="Pizza Restaurant API Project" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">Pizza Restaurant API</h3>
-                                <p class="text-gray-300 text-sm mb-4">This project implements a RESTful API for a Pizza Restaurant using Flask, following the MVC architectural pattern. It allows managing restaurants, pizzas, and their associations.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag">Flask</span>
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">SQLAlchemy</span>
-                                    <span class="tech-tag">SQLite</span>
-                                </div>
-                                <a href="https://github.com/biomdoian/pizza-api-code-challenge.git" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
-                                <p class="text-xs text-gray-400 mt-2">Backend Only - See GitHub for details</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll project-card cli python-app">
-                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                            <img src="images/libmate.jpg" alt="LibMate-Manager Project" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">LibMate-Manager</h3>
-                                <p class="text-gray-300 text-sm mb-4">LibMate-Manager is a beginner-friendly command-line application built with Python to help manage a small library. It simplifies tracking books, authors, borrowers, and loans.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">SQLAlchemy</span>
-                                    <span class="tech-tag">Alembic</span>
-                                    <span class="tech-tag">SQLite</span>
-                                </div>
-                                <a href="https://github.com/biomdoian/LibMate-Manager.git" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
-                                <p class="text-xs text-gray-400 mt-2">Command-Line Tool - See GitHub for details</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll delay-100 project-card frontend">
-                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                            <img src="images/vintage-cars.jpg" alt="Vintage Car Gallery Project" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">Vintage Car Gallery</h3>
-                                <p class="text-gray-300 text-sm mb-4">An interactive web application allowing users to explore a collection of vintage cars. Features include Browse specifications, history, viewing images, interactive color selection, and a form to share thoughts on preferred cars.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">JSON Server</span>
-                                </div>
-                                <a href="https://github.com/biomdoian/Vintage-Wheels.git" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
-                                <p class="text-xs text-gray-400 mt-2">Live Demo Coming Soon</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item transform opacity-0 translate-y-10 reveal-on-scroll delay-200 project-card frontend">
-                        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                            <img src="images/hotel-website.jpg" alt="De` Lux Hotel Website Project" class="w-full h-56 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-2">De` Lux Hotel Website</h3>
-                                <p class="text-gray-300 text-sm mb-4">This project is the digital presence of a family-owned hotel, designed to provide a luxurious and welcoming online experience. It features interactive navigation, a dining experience showcase, a visual gallery of amenities, and a detailed contact system.</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag">HTML5</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                </div>
-                                <a href="https://github.com/biomdoian/my-first-project.git" target="_blank" class="btn-secondary">View Code <i class="fab fa-github ml-2"></i></a>
-                                <p class="text-xs text-gray-400 mt-2">Live Demo Coming Soon</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-20 bg-gray-800 relative overflow-hidden contact-section-bg">
-            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-            <div class="container mx-auto px-6 relative z-10 text-center">
-                <h2 class="text-4xl font-bold font-montserrat mb-6 text-white transform opacity-0 translate-y-10 reveal-on-scroll">Get In Touch</h2>
-                <p class="text-lg text-gray-200 mb-10 max-w-2xl mx-auto transform opacity-0 translate-y-10 reveal-on-scroll delay-100">
-                    Have a project in mind or just want to say hello? Feel free to reach out!
-                </p>
-
-                <div class="contact-form-block transform opacity-0 translate-y-10 reveal-on-scroll delay-200">
-                    <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-6">Send Me a Message</h3>
-                    <form class="space-y-6">
-                        <input type="text" id="name" name="name" placeholder="Your Name" class="form-input" required>
-                        <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required>
-                        <input type="text" id="subject" name="subject" placeholder="Subject" class="form-input">
-                        <textarea id="message" name="message" rows="6" placeholder="Your Message" class="form-textarea" required></textarea>
-                        <button type="submit" class="btn-primary transform hover:scale-105 transition-transform duration-300">Send Message <i class="fas fa-paper-plane ml-2"></i></button>
-                    </form>
-                </div>
-
-                <div class="border-t border-gray-700 my-10 max-w-md mx-auto transform opacity-0 reveal-on-scroll delay-300"></div>
-
-                <div class="contact-details transform opacity-0 translate-y-10 reveal-on-scroll delay-400">
-                    <p class="text-lg text-gray-200 mb-6">You can also find me here:</p>
-                    
-                    <div class="contact-socials-grid">
-                        <a href="https://www.linkedin.com/in/ian-biomdo-b6b329278/" target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/biomdoian" target="_blank" class="social-icon">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.instagram.com/iankruze/" target="_blank" class="social-icon">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://wa.me/254743870689" target="_blank" class="social-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                        <a href="https://medium.com/@iankruze60" target="_blank" class="social-icon">
-                            <i class="fab fa-medium"></i>
-                        </a>
-                    </div>
-
-                    <div class="contact-details-list">
-                        <div class="contact-details-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:biomdoian20@gmail.com" class="hover:text-cyan-400 transition-colors duration-300">biomdoian20@gmail.com</a>
-                        </div>
-                        <div class="contact-details-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+254743870689" class="hover:text-cyan-400 transition-colors duration-300">0743870689</a>
-                        </div>
-                        <div class="contact-details-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Kenya, Nairobi</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8 transform opacity-0 translate-y-10 reveal-on-scroll delay-500">
-                        <a href="vcard/biomdo-ian.vcf" download class="btn-secondary">Download vCard <i class="fas fa-id-card ml-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-950 py-8 text-center border-t border-gray-800">
-        <div class="container mx-auto px-6">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://www.linkedin.com/in/ian-biomdo-b6b329278/" target="_blank" class="text-white hover:text-cyan-400 transition-colors duration-300 text-2xl">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/biomdoian" target="_blank" class="text-white hover:text-cyan-400 transition-colors duration-300 text-2xl">
-                    <i class="fab fa-github"></i>
-                 </a>
-                 <a href="https://www.instagram.com/iankruze/" target="_blank" class="text-white hover:text-cyan-400 transition-colors duration-300 text-2xl">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://wa.me/254743870689" target="_blank" class="text-white hover:text-cyan-400 transition-colors duration-300 text-2xl">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://medium.com/@iankruze60" target="_blank" class="text-white hover:text-cyan-400 transition-colors duration-300 text-2xl">
-                    <i class="fab fa-medium"></i>
-                </a>
-            </div>
-            <p class="text-white mb-2">Email: biomdoian20@gmail.com</p>
-            <p class="text-gray-200 text-sm">&copy; <span id="current-year"></span> Biomdo Ian. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JVZE8Z57BJ'); 
-    </script>
 </body>
 </html>
