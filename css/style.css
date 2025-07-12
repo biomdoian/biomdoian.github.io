@@ -10,9 +10,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation */
 #navbar {
-    background-color: rgba(10, 10, 26, 0.95); /* Semi-transparent dark background */
+    /* Adjusted: Make background solid semi-transparent black for better content coverage */
+    /* Changed from rgba(10, 10, 26, 0.95) to pure black with opacity for consistency */
+    background-color: rgba(0, 0, 0, 0.95); /* More opaque black to cover content */
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    /* Remove original Tailwind gradient if present in HTML for this ID */
 }
+/* Ensure the mobile menu also has a consistent dark background */
+#mobile-menu {
+    background-color: rgba(0, 0, 0, 0.98); /* Slightly darker for mobile menu for full coverage */
+}
+
 
 /* Hero Section Animations */
 @keyframes fadeInBg {
@@ -32,6 +40,52 @@ h1, h2, h3, h4, h5, h6 {
 .animate-fade-in-up {
     animation: fadeInUp 1s ease-out forwards 1.5s; /* Delay for background to settle */
 }
+
+/* Ensure hero section content is vertically centered for all screen sizes */
+#home {
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh; /* Ensure it takes full viewport height */
+    padding-top: 60px; /* Add padding to account for fixed navbar on all screens */
+}
+/* Adjusted for smaller screens: Tweak vertical positioning for better fill */
+#home .relative.z-10 {
+    /* Remove previous margin-top/padding-top if they created issues */
+    /* Instead, let flexbox handle centering and ensure content isn't obscured by fixed header */
+    padding: 20px; /* Add some general padding for mobile, so text isn't too close to edges */
+    max-width: 90%; /* Ensure content doesn't stretch too wide on very small screens */
+}
+/* Fine-tune heading and paragraph margins on smaller screens */
+#home h1 {
+    font-size: 3rem; /* Adjust font size for mobile if it's too large */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+#home p {
+    font-size: 1.25rem; /* Adjust font size for mobile */
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) { /* Adjust for medium screens and up */
+    #home h1 {
+        font-size: 5rem; /* Revert to larger size for tablets/desktops */
+    }
+    #home p {
+        font-size: 1.875rem; /* Revert for tablets/desktops */
+    }
+    #home .relative.z-10 {
+        padding: 6rem; /* Standard padding for larger screens */
+        max-width: 48rem; /* Revert to original max-width */
+    }
+}
+/* General padding for the hero content to avoid it being hidden under the fixed nav */
+#home .relative.z-10 {
+    padding-top: 80px; /* Ensures content starts below the fixed header */
+    padding-bottom: 20px;
+}
+
 
 /* Buttons */
 .btn-primary {
@@ -127,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8); /* Stronger shadow */
 }
 
-/* NEW: Contact Section Background (You can choose an image or pattern) */
+/* NEW: Contact Section Background (You can choose an an image or pattern) */
 .contact-section-bg {
     background-image: url('../images/dark-geometric-pattern.png'); /* Placeholder, replace with an actual subtle pattern or abstract image if desired */
     background-size: cover;
