@@ -127,6 +127,32 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8); /* Stronger shadow */
 }
 
+/* NEW: Contact Section Background (You can choose an image or pattern) */
+.contact-section-bg {
+    background-image: url('../images/dark-geometric-pattern.png'); /* Placeholder, replace with an actual subtle pattern or abstract image if desired */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: Creates a parallax effect */
+}
+
+/* NEW: Social Icons */
+.social-icon {
+    @apply text-white text-3xl hover:text-cyan-400 transition-colors duration-300;
+    width: 48px; /* Ensure consistent size */
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Make them circular */
+    border: 1px solid rgba(0, 255, 255, 0.3); /* Subtle border */
+    transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    @apply bg-cyan-600 text-gray-900 shadow-lg transform scale-110;
+    border-color: #00FFFF; /* Vibrant border on hover */
+}
+
 
 /* Scroll Reveal Animations (JavaScript controlled) */
 .reveal-on-scroll {
@@ -142,3 +168,4 @@ h1, h2, h3, h4, h5, h6 {
 .reveal-on-scroll.delay-100 { transition-delay: 0.1s; }
 .reveal-on-scroll.delay-200 { transition-delay: 0.2s; }
 .reveal-on-scroll.delay-300 { transition-delay: 0.3s; }
+.reveal-on-scroll.delay-400 { transition-delay: 0.4s; }
