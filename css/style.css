@@ -160,9 +160,11 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(0, 255, 255, 0.1);
 }
 
-/* Contact Form Inputs */
+/* Contact Form Inputs - ADJUSTED FOR DARKER BACKGROUND */
 .form-input, .form-textarea {
-    @apply w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300;
+    @apply w-full p-4 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300;
+    /* Changed bg-gray-700 to bg-gray-800 for slightly darker input fields */
+    /* Changed placeholder-gray-300 to placeholder-gray-400 for better contrast on darker background */
 }
 .form-textarea {
     resize: vertical; /* Allow vertical resizing only */
@@ -204,29 +206,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* --- REVISED CONTACT SECTION STYLES (Centering & Form Fixes) --- */
-#contact .contact-content {
-    @apply max-w-4xl mx-auto text-center; /* Center align all content within the section */
+/* --- REVERTED CONTACT SECTION STYLES (Original Layout, Centered, Darker Inputs) --- */
+#contact .container {
+    @apply mx-auto px-6; /* Tailwind container defaults, but ensures centering */
 }
 
-#contact .contact-form-container {
-    @apply bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 max-w-2xl mx-auto mt-8; /* Form container, centered and styled */
+#contact .contact-form-block {
+    @apply bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 max-w-2xl mx-auto mb-10; /* Centered form block */
 }
 
-#contact .contact-details-grid {
-    @apply flex flex-col items-center justify-center space-y-4 mt-8 text-lg text-gray-300; /* Center contact info vertically */
+#contact .contact-details {
+    @apply max-w-2xl mx-auto text-center; /* Centered details block */
 }
 
-#contact .contact-details-grid .item {
-    @apply flex items-center;
+#contact .contact-details-item {
+    @apply flex items-center justify-center mb-4 text-lg text-gray-300; /* Centered contact info items */
 }
 
-#contact .contact-details-grid .item i {
+#contact .contact-details-item i {
     @apply mr-3 text-cyan-400 text-xl;
 }
 
 #contact .contact-socials-grid {
-    @apply flex flex-wrap justify-center gap-4 mt-6; /* Center social icons */
+    @apply flex flex-wrap justify-center gap-4 mt-6 mb-8; /* Centered social icons */
 }
 
 /* Scroll Reveal Animations (JavaScript controlled) */
