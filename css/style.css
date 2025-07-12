@@ -1,0 +1,125 @@
+/* Base Styles & Typography */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #0A0A1A, #1A1A3A); /* Dark gradient background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation */
+#navbar {
+    background-color: rgba(10, 10, 26, 0.95); /* Semi-transparent dark background */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Hero Section Animations */
+@keyframes fadeInBg {
+    from { opacity: 0; transform: scale(1.1); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-bg {
+    animation: fadeInBg 2s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards 1.5s; /* Delay for background to settle */
+}
+
+/* Buttons */
+.btn-primary {
+    @apply inline-block px-8 py-4 text-lg font-semibold rounded-full border-2 border-cyan-400 text-white transition-all duration-300;
+    background: transparent;
+}
+.btn-primary:hover {
+    @apply bg-cyan-400 text-gray-900 shadow-lg;
+    transform: scale(1.05); /* subtle hover effect */
+}
+
+.btn-secondary {
+    @apply inline-block px-6 py-3 text-base font-medium rounded-full border border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300;
+    background: transparent;
+}
+.btn-secondary:hover {
+    @apply shadow-md;
+    transform: translateY(-2px); /* subtle lift effect */
+}
+
+
+/* About Section - Avatar Animation */
+@keyframes pulseBorder {
+    0% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255, 255, 0); }
+}
+.animate-pulse-border {
+    animation: pulseBorder 2s infinite; /* Subtle pulse effect on avatar border */
+}
+
+/* Skills Tags */
+.skill-tag {
+    @apply bg-gray-700 text-white text-sm px-4 py-2 rounded-full shadow-md transition-all duration-300;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+}
+.skill-tag:hover {
+    @apply bg-cyan-600 text-gray-900 transform scale-105;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Portfolio Filtering Buttons */
+.filter-btn {
+    @apply px-6 py-2 rounded-full text-lg font-medium text-gray-300 border border-gray-700 transition-all duration-300;
+    background: transparent;
+}
+.filter-btn:hover:not(.active) {
+    @apply border-cyan-400 text-cyan-400;
+}
+.filter-btn.active {
+    @apply bg-cyan-400 text-gray-900 border-cyan-400 shadow-lg;
+    transform: scale(1.05);
+}
+
+/* Project Cards */
+.project-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 255, 255, 0.2);
+}
+
+.tech-tag {
+    @apply bg-gray-700 text-xs px-3 py-1 rounded-full text-cyan-200;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+/* Contact Form Inputs */
+.form-input, .form-textarea {
+    @apply w-full p-4 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300;
+}
+.form-textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+
+/* Scroll Reveal Animations (JavaScript controlled) */
+.reveal-on-scroll {
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Delay for staggered reveal */
+.reveal-on-scroll.delay-100 { transition-delay: 0.1s; }
+.reveal-on-scroll.delay-200 { transition-delay: 0.2s; }
+.reveal-on-scroll.delay-300 { transition-delay: 0.3s; }
