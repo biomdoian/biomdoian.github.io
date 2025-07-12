@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-/* Portfolio Filtering Buttons - Refined Styles to match screenshot */
+/* Portfolio Filtering Buttons - Refined Styles to match screenshot & add zoom */
 .filter-btn {
     @apply px-6 py-2 rounded-full text-lg font-medium transition-all duration-300;
     background: transparent;
@@ -81,15 +81,17 @@ h1, h2, h3, h4, h5, h6 {
     color: #00FFFF; /* Neon Blue text */
     min-width: 120px; /* Ensure consistent width */
     text-align: center;
+    transform: scale(1); /* Ensure base scale for transition */
 }
 .filter-btn:hover:not(.active) {
-    @apply text-white; /* Text becomes white on hover for non-active */
+    border-color: #00AADD; /* Slightly darker cyan on hover */
+    @apply text-white transform scale-105; /* Text becomes white and zooms in */
     background-color: rgba(0, 255, 255, 0.2); /* Slight transparent fill */
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Stronger glow on hover */
 }
 .filter-btn.active {
     @apply bg-cyan-400 text-gray-900 shadow-lg;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Active state zooms slightly */
     border-color: #00FFFF; /* Ensure border stays neon blue */
 }
 
