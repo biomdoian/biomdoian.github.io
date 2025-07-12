@@ -66,19 +66,21 @@ header nav ul li a:hover {
 #home h1 {
     font-size: 3rem;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Reduced margin for closer subheading */
     color: #00FFFF; /* Ensure hero title is bright cyan */
 }
-#home p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    color: #A7DBF5; /* Lighter blue for hero subtitle */
+/* New style for the subheading in hero */
+#home .hero-subheading {
+    font-size: 1.25rem; /* Smaller than main heading */
+    color: #A7DBF5; /* Lighter blue for subheading */
+    margin-bottom: 2rem; /* Space before the button */
+    font-weight: 400; /* Normal weight */
 }
 @media (min-width: 768px) {
     #home h1 {
         font-size: 5rem;
     }
-    #home p {
+    #home .hero-subheading { /* Apply media query to subheading too */
         font-size: 1.875rem;
     }
     #home .relative.z-10 {
@@ -197,27 +199,29 @@ header nav ul li a:hover {
 
 /* Contact Form Inputs */
 .form-input, .form-textarea {
-    @apply w-full p-4 rounded-lg bg-gray-800 border text-white placeholder-gray-400 focus:ring-2 transition-all duration-300;
-    border-color: #4A5568; /* Slightly lighter gray border */
+    @apply w-full p-4 rounded-lg bg-gray-800 text-white focus:ring-2 transition-all duration-300;
+    border: 2px solid #00FFFF; /* Visible bright cyan border */
     background-color: #1A202C; /* Darker input background */
-    focus:ring-color #00FFFF; /* Bright Cyan ring on focus */
+    color: #E0E7FF; /* Ensure typed text is visible (light color) */
+    caret-color: #00FFFF; /* Cyan blinking cursor */
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #A7DBF5; /* Lighter blue for placeholder text */
+    opacity: 1; /* Ensures placeholder is not transparent */
+}
+.form-input:focus,
+.form-textarea:focus {
+    outline: none; /* Remove default outline */
+    border-color: #00AADD; /* Slightly darker cyan on focus */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Glow on focus */
 }
 .form-textarea {
     resize: vertical;
 }
 
-/* Stronger text shadows for Hero Section (already applied with Tailwind utility classes in HTML) */
-/* If you want to use custom CSS for shadows, apply here: */
-/*
-.hero-title {
-    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
-}
-.hero-subtitle {
-    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);
-}
-*/
-
-/* Contact Section Background (You can choose an image or pattern) */
+/* Contact Section Background */
 .contact-section-bg {
     /* Keeping this for potential subtle pattern */
     background-image: url('../images/dark-geometric-pattern.png');
@@ -291,7 +295,14 @@ header nav ul li a:hover {
     margin-bottom: 2.5rem; /* Add some space below social icons in contact section */
 }
 
-/* Footer Social Icons (already has the social-icon class, just ensuring consistency) */
+/* Footer Section */
+footer {
+    background-color: #0A0F1A; /* Even darker, more subtle dark blue for the footer */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    border-top: 1px solid #1F2937; /* Tailwind's border-gray-800 */
+}
 footer .social-icon {
     border: 1px solid rgba(0, 255, 255, 0.3); /* Slightly more subtle border in footer */
     background-color: transparent; /* No background fill in footer */
