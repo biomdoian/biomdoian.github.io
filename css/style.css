@@ -112,10 +112,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Contact Form Inputs */
 .form-input, .form-textarea {
-    @apply w-full p-4 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300;
+    @apply w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-300 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300;
 }
 .form-textarea {
     resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Stronger text shadows for Hero Section */
+.hero-title {
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8); /* Stronger shadow */
+}
+
+.hero-subtitle {
+    text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8); /* Stronger shadow */
 }
 
 
