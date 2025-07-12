@@ -230,63 +230,62 @@
         <section id="contact" class="py-20 bg-gray-800 relative overflow-hidden contact-section-bg">
             <div class="absolute inset-0 bg-black bg-opacity-60"></div>
             <div class="container mx-auto px-6 relative z-10">
-                <h2 class="text-4xl font-bold font-montserrat mb-6 text-center text-white transform opacity-0 translate-y-10 reveal-on-scroll">Get In Touch</h2>
-                <p class="text-lg text-gray-200 mb-10 text-center max-w-2xl mx-auto transform opacity-0 translate-y-10 reveal-on-scroll delay-100">
-                    Feel free to reach out via the form below or connect with me through the provided contact details and social media channels.
-                </p>
+                <div class="contact-content">
+                    <h2 class="text-4xl font-bold font-montserrat mb-6 text-center text-white transform opacity-0 translate-y-10 reveal-on-scroll">Get In Touch</h2>
+                    <p class="text-lg text-gray-200 mb-10 text-center max-w-2xl mx-auto transform opacity-0 translate-y-10 reveal-on-scroll delay-100">
+                        Have a project in mind or just want to say hello? Feel free to reach out!
+                    </p>
 
-                <div class="contact-container">
-                    <div class="contact-info-block transform opacity-0 translate-y-10 reveal-on-scroll delay-200">
-                        <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-6 text-center md:text-left">Direct Contact & Socials</h3>
-                        
-                        <div class="space-y-4 mb-8">
-                            <div class="contact-info-item">
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:biomdoian20@gmail.com" class="hover:text-cyan-400 transition-colors duration-300">biomdoian20@gmail.com</a>
-                            </div>
-                            <div class="contact-info-item">
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:+254743870689" class="hover:text-cyan-400 transition-colors duration-300">0743870689</a>
-                            </div>
-                            <div class="contact-info-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Kenya, Nairobi</span>
-                            </div>
-                        </div>
-
-                        <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-6 text-center md:text-left">Follow Me</h3>
-                        <div class="contact-socials-grid">
-                            <a href="https://www.linkedin.com/in/ian-biomdo-b6b329278/" target="_blank" class="social-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://github.com/biomdoian" target="_blank" class="social-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.instagram.com/iankruze/" target="_blank" class="social-icon">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://wa.me/254743870689" target="_blank" class="social-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="https://medium.com/@iankruze60" target="_blank" class="social-icon">
-                                <i class="fab fa-medium"></i>
-                            </a>
-                        </div>
-                        
-                        <div class="vcard-button-container">
-                            <a href="vcard/biomdo-ian.vcf" download class="btn-secondary">Download vCard <i class="fas fa-id-card ml-2"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-block transform opacity-0 translate-y-10 reveal-on-scroll delay-300">
+                    <div class="contact-form-container transform opacity-0 translate-y-10 reveal-on-scroll delay-200">
                         <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-6 text-center">Send Me a Message</h3>
                         <form class="space-y-6">
-                            <input type="text" id="name" name="name" placeholder="Your Name" class="form-input" required>
-                            <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <input type="text" id="name" name="name" placeholder="Your Name" class="form-input" required>
+                                <input type="email" id="email" name="email" placeholder="Your Email" class="form-input" required>
+                            </div>
                             <input type="text" id="subject" name="subject" placeholder="Subject" class="form-input">
                             <textarea id="message" name="message" rows="6" placeholder="Your Message" class="form-textarea" required></textarea>
                             <button type="submit" class="btn-primary w-full md:w-auto transform hover:scale-105 transition-transform duration-300">Send Message <i class="fas fa-paper-plane ml-2"></i></button>
                         </form>
+                    </div>
+
+                    <div class="border-t border-gray-700 my-10 max-w-2xl mx-auto transform opacity-0 reveal-on-scroll delay-300"></div> <p class="text-lg text-gray-200 mb-6 transform opacity-0 translate-y-10 reveal-on-scroll delay-400">You can also find me here:</p>
+                    
+                    <div class="contact-socials-grid transform opacity-0 translate-y-10 reveal-on-scroll delay-500">
+                        <a href="https://www.linkedin.com/in/ian-biomdo-b6b329278/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/biomdoian" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/iankruze/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/254743870689" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://medium.com/@iankruze60" target="_blank" class="social-icon">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </div>
+
+                    <div class="contact-details-grid transform opacity-0 translate-y-10 reveal-on-scroll delay-600">
+                        <div class="item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:biomdoian20@gmail.com" class="hover:text-cyan-400 transition-colors duration-300">biomdoian20@gmail.com</a>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+254743870689" class="hover:text-cyan-400 transition-colors duration-300">0743870689</a>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kenya, Nairobi</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 transform opacity-0 translate-y-10 reveal-on-scroll delay-700">
+                        <a href="vcard/biomdo-ian.vcf" download class="btn-secondary">Download vCard <i class="fas fa-id-card ml-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -324,7 +323,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-JVZE8Z57BJ'); 
+      gtag('config', 'G-JVZE8Z57BJ');
     </script>
 </body>
 </html>

@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed; /* Optional: Creates a parallax effect */
 }
 
-/* NEW: Social Icons */
+/* Social Icons */
 .social-icon {
     @apply text-white text-3xl hover:text-cyan-400 transition-colors duration-300;
     width: 48px; /* Ensure consistent size */
@@ -204,34 +204,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* --- NEW CONTACT SECTION STYLES --- */
-#contact .contact-container {
-    @apply flex flex-col md:flex-row md:space-x-12 items-center md:items-start max-w-5xl mx-auto;
+/* --- REVISED CONTACT SECTION STYLES (Centering & Form Fixes) --- */
+#contact .contact-content {
+    @apply max-w-4xl mx-auto text-center; /* Center align all content within the section */
 }
 
-#contact .contact-info-block {
-    @apply bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 w-full md:w-1/2 mb-8 md:mb-0;
+#contact .contact-form-container {
+    @apply bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 max-w-2xl mx-auto mt-8; /* Form container, centered and styled */
 }
 
-#contact .contact-form-block {
-    @apply bg-gray-900 p-8 rounded-lg shadow-xl border border-gray-700 w-full md:w-1/2;
+#contact .contact-details-grid {
+    @apply flex flex-col items-center justify-center space-y-4 mt-8 text-lg text-gray-300; /* Center contact info vertically */
 }
 
-#contact .contact-info-item {
-    @apply flex items-center mb-4 text-lg text-gray-300;
+#contact .contact-details-grid .item {
+    @apply flex items-center;
 }
 
-#contact .contact-info-item i {
+#contact .contact-details-grid .item i {
     @apply mr-3 text-cyan-400 text-xl;
 }
 
 #contact .contact-socials-grid {
-    @apply flex flex-wrap justify-center md:justify-start gap-4 mt-6; /* Adjusted gap */
-}
-
-/* Adjust download vCard button positioning */
-#contact .vcard-button-container {
-    @apply mt-8 text-center md:text-left;
+    @apply flex flex-wrap justify-center gap-4 mt-6; /* Center social icons */
 }
 
 /* Scroll Reveal Animations (JavaScript controlled) */
