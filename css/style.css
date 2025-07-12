@@ -73,18 +73,26 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-/* Portfolio Filtering Buttons */
+/* Portfolio Filtering Buttons - Refined Styles to match screenshot */
 .filter-btn {
-    @apply px-6 py-2 rounded-full text-lg font-medium text-gray-300 border border-gray-700 transition-all duration-300;
+    @apply px-6 py-2 rounded-full text-lg font-medium transition-all duration-300;
     background: transparent;
+    border: 2px solid #00FFFF; /* Vibrant Neon Blue Border */
+    color: #00FFFF; /* Neon Blue text */
+    min-width: 120px; /* Ensure consistent width */
+    text-align: center;
 }
 .filter-btn:hover:not(.active) {
-    @apply border-cyan-400 text-cyan-400;
+    @apply text-white; /* Text becomes white on hover for non-active */
+    background-color: rgba(0, 255, 255, 0.2); /* Slight transparent fill */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
 .filter-btn.active {
-    @apply bg-cyan-400 text-gray-900 border-cyan-400 shadow-lg;
+    @apply bg-cyan-400 text-gray-900 shadow-lg;
     transform: scale(1.05);
+    border-color: #00FFFF; /* Ensure border stays neon blue */
 }
+
 
 /* Project Cards */
 .project-card {
