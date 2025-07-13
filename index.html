@@ -70,6 +70,11 @@
                     <p class="text-lg leading-relaxed text-gray-300 mb-8">
                         I am an enthusiastic and dedicated aspiring Full-Stack Developer. My passion lies in crafting robust and scalable web applications from conception to deployment. I possess a strong foundation in backend development using Python and Flask, coupled with expertise in PostgreSQL for efficient data management and JWT authentication for secure API access. On the frontend, I am proficient in building dynamic and responsive user interfaces with React, JavaScript, HTML, and CSS (including Tailwind CSS). I am eager to apply my problem-solving skills and comprehensive understanding of modern web technologies to contribute to innovative projects and grow within a collaborative development environment.
                     </p>
+                    <div class="text-center lg:text-left mt-8">
+                        <a href="docs/biomdo-ian-resume.pdf" download="Biomdo-Ian-Resume.pdf" class="btn-primary transform hover:scale-105 transition-transform duration-300">
+                            Download My Resume <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -240,10 +245,11 @@
 
                 <div class="contact-form-block transform opacity-0 translate-y-10 reveal-on-scroll delay-200">
                     <h3 class="text-2xl font-bold font-montserrat text-cyan-400 mb-6">Send Me a Message</h3>
-                    <form class="max-w-xl mx-auto space-y-6"> <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <form class="max-w-xl mx-auto space-y-6" action="https://formspree.io/f/mpwlaqea" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <input type="text" id="name" name="name" placeholder="Your Name" class="form-input p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500" required />
-                            <input type="email" id="email" name="email" placeholder="Your Email" class="form-input p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500" required />
-                            <input type="text" id="subject" name="subject" placeholder="Subject" class="form-input p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
+                            <input type="email" id="email" name="_replyto" placeholder="Your Email" class="form-input p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500" required />
+                            <input type="text" id="subject" name="_subject" placeholder="Subject" class="form-input p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
                         </div>
                         <div>
                             <textarea id="message" name="message" rows="6" placeholder="Your Message" class="form-textarea w-full p-3 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 resize-y" required></textarea>
