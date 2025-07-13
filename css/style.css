@@ -293,7 +293,7 @@ header nav ul li a:hover {
 
 /* MODIFIED: contact-socials-grid to ensure horizontal centering for social icons */
 /* The HTML structure already applies 'flex flex-wrap justify-center gap-4' to the parent div,
-   so this CSS class is redundant for flex properties, but kept for clarity if needed for other styles. */
+    so this CSS class is redundant for flex properties, but kept for clarity if needed for other styles. */
 #contact .flex.justify-center.flex-wrap.gap-4 { /* Targeting the existing social icon flex container */
     margin-top: 2.5rem; /* Add some space above social icons in contact section */
     margin-bottom: 2.5rem; /* Add some space below social icons in contact section */
@@ -334,4 +334,4 @@ footer p {
 .reveal-on-scroll.delay-200 { transition-delay: 0.2s; }
 .reveal-on-scroll.delay-300 { transition-delay: 0.3s; }
 .reveal-on-scroll.delay-400 { transition-delay: 0.4s; }
-.reveal-on-scroll.delay-500 { transition-delay: 0.5s; } /* Added for vCard */
+.reveal-on-scroll.delay-500 { transition-delay: 0.5s; }
